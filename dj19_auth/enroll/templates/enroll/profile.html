@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <style>
+        .success{
+        color:green;
+        }
+    </style>
+</head>
+<body>
+<h1>Welcome {{ name }}</h1>
+<form action="" method="POST" novalidate>
+    {% csrf_token %}
+    {% if form.non_field_errors %}
+    {% for error in form.non_field_errors %}
+    {{ error }}
+    {% endfor %}
+    {% endif %}
+
+    {% for fl in form %}
+    {{ fl.label_tag }}{{ fl }}{{ fl.errors|striptags }}
+    <br><br>
+    {% endfor %}
+    <input type="submit" value="Save">
+</form>
+{% if messages %}
+{% for message in messages %}
+<span {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</span>
+{% endfor %}
+{% endif %}
+<br>
+<a href="{% url 'changepass' %}">Change Password</a>
+<a href="{% url 'user_logout' %}">User Logout</a>
+</body>
+</html>

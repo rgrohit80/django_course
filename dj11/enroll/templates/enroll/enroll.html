@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enroll form</title>
+    <style>
+        .errorlist{
+        list-style-type:none;
+        color:red;
+        font-size:18px;
+        margin:0;
+        padding:0;
+        }
+    </style>
+</head>
+<body>
+<form action="" method="POST" novalidate>
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    {% for field in form %}
+     <div>
+         <br>
+         {{ field.label_tag }}{{ field }}  <span class="errorlist">{{ field.errors|striptags}}</span>
+
+
+     </div>
+    {% endfor %}
+    <button type="submit" value="click me">click me</button>
+</form>
+
+</body>
+</html>

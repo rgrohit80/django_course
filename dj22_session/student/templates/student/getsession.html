@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Session get</title>
+</head>
+<body>
+{{ name }}
+{% for key in request.session.keys %}
+key : {{ key }}
+{% endfor %}
+
+{% for item in item %}
+key : {{ item }}
+{% endfor %}
+{{ request.session.get_session_cookie_age }}
+{{ request.session.get_expiry_date }}
+{{ request.session.get_expire_at_browser_close }}
+
+</body>
+</html>

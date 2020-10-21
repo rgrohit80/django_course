@@ -1,0 +1,12 @@
+
+{% if posts %}
+<ul>
+    <p>Author -- Posts</p>
+    {% for post in posts %}
+    <p>--------------------------</p>
+    <p>{{ forloop.counter }}. {{ post.user }} -- {{ post.post }}</p>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No post available</p>
+{% endif %}

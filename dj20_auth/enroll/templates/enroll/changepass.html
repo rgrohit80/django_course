@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Password</title>
+</head>
+<body>
+<h2> Change Password</h2>
+<form method="POST" action="" novalidate>
+    {% csrf_token %}
+    {% for fl in form %}
+    {{ fl.label_tag }}{{ fl }}{{ fl.errors|striptags }}
+    {% endfor %}
+    <input type="submit" value="Save">
+</form>
+
+</body>
+</html>

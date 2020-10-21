@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mycv</title>
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/all.min.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet'>
+    {% block corecss %}
+    <style>
+        html,body {
+            height: 100%;
+        }
+        .container-fluid {
+            min-height: 100%;
+        }
+
+        /* Icon Color */
+
+        .i {
+            color: chartreuse;
+        }
+
+        a.nav-link{
+            color: whitesmoke;
+        }
+        a.nav-link:hover{
+            color: black;
+            background: #e9cd79;
+        }
+
+        a.nav-link.active{
+            color: whitesmoke;
+            background: #ffc107;
+            font-weight: bold;
+        }
+        /* Icon Color */
+        #icon {
+            color: chartreuse;
+        }
+
+    </style>
+    {% endblock corecss %}
+</head>
+<script src="{% static 'core/js/jquery.js' %}"></script>
+<script src="{% static 'core/js/popper.js' %}"></script>
+<script src="{% static 'core/js/bootstrap.js' %}"></script>
+<script src="{% static 'core/js/all.min.js' %}"></script>
+
+<body>
+    <div class="container-fluid bg-dark">
+        <div class="row">
+            <div class="col-sm-2">
+                {% include 'core/sidebar.html' %}
+            </div>
+            <div class="col-sm-10">
+                {% block content %}
+                {% endblock content %}
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

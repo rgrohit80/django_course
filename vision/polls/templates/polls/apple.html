@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apple</title>
+    <link rel="stylesheet" href="{% static 'css/apple.css' %}">
+    <script src="{% static 'js/new.js' %}"></script>
+</head>
+<body>
+<h1>welcome to django home..!!</h1>
+<h2>{{ name }} these belong to : {{ country }}</h2>
+<source src="{% static 'audio/file_example_MP3_1MG.mp3' %}" type="audio/mpeg">
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <img height="30%" width="30%" id="i" src="{% static 'polls/images/spacex.jpg' %}" alt="django">
+        </div>
+        <div class="col-md-6">
+            <img height="30%" width="30%" id="is" src="{% static 'polls/images/spacex.jpg' %}" alt="django">
+        </div>
+    </div>
+</div>
+
+<form action="">
+    <button class="btn btn-primary" type="submit" onclick="disp()">Click me</button>
+</form>
+<button style="color: green;" class="btn" type="submit" onclick="foo()">show</button>
+<script src="{% static 'polls/js/all.js' %}">
+</script>
+<p>
+<h2>
+    {% for name in name %}
+    {{ name }}
+    {% endfor %}
+    belongs to country {{ country }}
+</h2>
+Inserting or updating data is also done using the handler structure known as a cursor. When you use a transactional
+storage engine such as InnoDB (the default in MySQL 5.5 and higher), you must commit the data after a sequence of
+INSERT, DELETE, and UPDATE statements.
+
+This example shows how to insert new data. The second INSERT depends on the value of the newly created primary key
+of the first. The example also demonstrates how to use extended formats. The task is to add a new employee starting
+to work tomorrow with a salary set to 50000.
+</p>
+
+</body>
+</html>

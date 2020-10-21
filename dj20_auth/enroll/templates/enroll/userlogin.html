@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Login</title>
+    <style>
+        .er{
+        color:red;
+        }
+    </style>
+</head>
+<body>
+<form action="" method="POST" novalidate>
+    {% csrf_token %}
+    {% if form.non_field_errors %}
+    {% for error in form.non_field_errors %}
+    <p class="er">{{ error }}</p>
+    {% endfor %}
+    {% endif %}
+    <br>
+
+    {% for fl in form %}
+    {{ fl.label_tag }}{{ fl }}{{ fl.errors|striptags }}<br><br>
+    {% endfor %}
+    <input type="submit" value="Submit">
+</form>
+<br>
+<a href="{% url 'signup' %}">Sign Up</a>
+</body>
+</html>

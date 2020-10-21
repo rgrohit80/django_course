@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>This is home page..!!</h1>
+<a href="{% url 'detail' 1 %}">student 1</a>
+<a href="{% url 'detail' 2 %}">student 2</a>
+<a href="{% url 'detail' 3 %}">student 3</a>
+
+<h1>This sub lime</h1>
+<a href="{% url 'subdetail' 1 5 %}">sub student 1</a>
+<a href="{% url 'subdetail' 2 6 %}">sub student 2</a>
+<a href="{% url 'subdetail' 3 7 %}">sub student 3</a>
+
+
+</body>
+</html>
