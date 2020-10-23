@@ -6,3 +6,5 @@ urlpatterns = [
     path('delete/<int:id>/', views.DeleteData.as_view(), name='delete_data'),
     path('update/<int:id>/', views.UpdateData.as_view(), name='update_data')
 ]
+
+

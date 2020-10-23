@@ -263,3 +263,9 @@ J
 dj31_file/enroll/delete.py,3\4\34f3cb22c0e2e3ff9b4a7315b7c989689c9255ac
 K
 dj31_file/dj31_file/urls.py,5\8\586b441d6137e44ed4a5b9db019e0d0efe2e4ac3
+a
+1crudproject2/enroll/templates/enroll/addshow.html,f\9\f9737e2d32fcda498de3bb28f5d51411c5f081d9
+L
+crudproject2/enroll/views.py,5\f\5f84ca51f6749e7ee7581683ac215dabc6368e79
+K
+crudproject2/enroll/urls.py,e\d\ed245f2c0ecf32497f1a835409b81c254c31c2c5
